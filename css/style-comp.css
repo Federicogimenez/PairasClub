@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-weight: 300; }
+
+.container {
+  background-color: #000;
+  display: grid;
+  grid-template-columns: 3rem [full-start] 1fr repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) 1fr [full-end] 3rem;
+  grid-template-rows: 70vh 20vh 80vh 100vh 80vh 30vh; }
+
+.bg-logo {
+  margin: 0 3rem;
+  grid-column: full-start / full-end;
+  grid-row: 1 / -1;
+  position: fixed;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #000, transparent, #000), url(../../img/concrete-wall.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center; }
+  .bg-logo__img {
+    width: 100%; }
+
+.heading__1 {
+  font-family: "Gochi Hand", cursive;
+  text-transform: uppercase;
+  color: #e8feff;
+  font-size: 5rem;
+  animation: movingDown 1s cubic-bezier(0.4, 1.46, 0.73, 1.26);
+  animation-delay: .5s;
+  animation-fill-mode: both; }
+
+.header {
+  grid-column: col-start 1 / col-end 12;
+  display: flex;
+  justify-content: center;
+  position: relative; }
+  .header__left {
+    background-color: #ff3333;
+    background-image: linear-gradient(to bottom, rgba(61, 35, 35, 0.8) 10%, transparent 70%), url(../../img/fede-byn.JPG);
+    background-size: cover;
+    background-position-y: 78%;
+    width: 100%;
+    height: 100%;
+    animation: movingRight 1s ease-out;
+    animation-fill-mode: both;
+    border-radius: 3px;
+    box-shadow: -1rem 3rem 6rem; }
+  .header__right {
+    background-color: #1e5d17;
+    background-image: linear-gradient(to bottom, rgba(61, 35, 35, 0.8) 10%, transparent 70%), url(../../img/fede-byn-b.jpg);
+    background-size: cover;
+    background-position-y: 54%;
+    background-position-x: 54%;
+    width: 100%;
+    height: 100%;
+    animation: movingLeft 1s ease-out;
+    animation-fill-mode: both;
+    border-radius: 3px;
+    box-shadow: 1rem 3rem 6rem; }
+  .header__content {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; }
+  .header__logo {
+    width: 20rem;
+    height: 20rem;
+    background-color: rgba(30, 93, 23, 0.6);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4rem 6rem #000;
+    animation: scaleLogo 1s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: both; }
+  .header__img {
+    width: 100%; }
+
+.navigation-section {
+  grid-column: col-start 2 / col-end 11;
+  z-index: 5; }
+
+.navigation {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .navigation__link {
+    text-decoration: none;
+    font-family: "Gochi Hand", cursive;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #e8feff;
+    display: block;
+    padding: 2rem;
+    transform: scale(1);
+    transition: all .2s; }
+    .navigation__link:hover {
+      color: #ff3333;
+      background-color: #13181b;
+      border-radius: 5px;
+      transform: scale(1.2) rotate(-5deg); }
+
+.culture {
+  grid-column: col-start 1 / col-end 12;
+  background-color: #953002;
+  z-index: 5; }
+
+.product {
+  grid-column: col-start 1 / col-end 12;
+  background-color: #12234e;
+  opacity: .3; }
+
+.work {
+  grid-column: col-start 1 / col-end 12;
+  background-color: #531210;
+  opacity: .3; }
+
+@keyframes movingRight {
+  0% {
+    transform: translateX(-30rem);
+    opacity: 0; }
+  50% {
+    transform: translateX(0rem);
+    opacity: .8; }
+  70% {
+    transform: translateX(-2rem);
+    opacity: 1; }
+  100% {
+    transform: translateX(0rem);
+    opacity: .9; } }
+
+@keyframes movingLeft {
+  0% {
+    transform: translateX(30rem);
+    opacity: 0; }
+  50% {
+    transform: translateX(0rem);
+    opacity: .8; }
+  70% {
+    transform: translateX(2rem);
+    opacity: 1; }
+  100% {
+    transform: translateX(0rem);
+    opacity: .9; } }
+
+@keyframes movingDown {
+  0% {
+    transform: translateY(-30rem);
+    opacity: .5; }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1; } }
+
+@keyframes scaleLogo {
+  0% {
+    transform: scale(0) translateY(-5rem); }
+  100% {
+    transform: scale(1) translateY(0rem); } }

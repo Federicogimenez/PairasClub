@@ -1,0 +1,60 @@
+.header{
+    grid-column: col-start 1 / col-end 12;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &__left{
+        background-color: $color-primary-red;
+        background-image: linear-gradient(to bottom, rgba($color-primary-gray-1, .8) 10%, transparent 70%),
+                            url(../../img/fede-byn.JPG);
+                            background-size: cover;
+                            background-position-y: 78%;
+    
+        width: 100%;
+        height: 100%;
+        animation: movingRight 1s ease-out;
+        animation-fill-mode: both;
+        border-radius: 3px;
+        box-shadow: -1rem 3rem 6rem;
+    }
+    &__right{
+        background-color: $color-primary-green;
+        background-image: linear-gradient(to bottom, rgba($color-primary-gray-1, .8) 10%, transparent 70%),
+                            url(../../img/fede-byn-b.jpg);
+                            background-size: cover;
+                            background-position-y: 54%;
+                            background-position-x: 54%;
+        width: 100%;
+        height: 100%;
+        animation: movingLeft 1s ease-out;
+        animation-fill-mode: both;
+        border-radius: 3px;
+        box-shadow: 1rem 3rem 6rem;
+    }
+    &__content{
+        z-index: 5;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+    &__logo{
+        width: 20rem;
+        height: 20rem;
+        background-color: rgba($color-primary-green , .6);
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4rem 6rem #000;
+        animation: scaleLogo 1s ease-in-out;
+        animation-delay: 1.2s;
+        animation-fill-mode: both;
+    }
+    &__img{
+        width: 100%;
+    }
+}
