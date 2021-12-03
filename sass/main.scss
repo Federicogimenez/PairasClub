@@ -3,9 +3,14 @@
 
 @import "__sections/header";
 @import "__sections/navigation";
+@import "__sections/promotion";
 @import "__sections/culture";
 @import "__sections/product";
 @import "__sections/work";
+@import "__sections/poput";
 
 
-@import "__animations/heading";
+@import "__base/base";
+@import "__animations/movements";
+
+@import "__sections/footer";

@@ -1,8 +1,11 @@
 .navigation-section{
     grid-column: col-start 2 / col-end 11;
-    z-index: 5;
+    z-index: 10;
 
 
+    animation: moveUp 1s ease-out;
+    animation-delay: 1.2s;
+    animation-fill-mode: both;
 }
 .navigation{
     height: 100%;

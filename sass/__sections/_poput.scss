@@ -1,0 +1,248 @@
+.poput{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, $color-primary-wine, transparent, $color-primary-wine);
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row: 100%;
+    justify-items: center;
+    align-items: center;
+
+    &:target{
+        visibility: visible;
+        opacity: 1;
+    }
+    &__close{
+        &:link, 
+        &:visited{
+            font-size: 5rem;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            right: 4rem;
+            text-decoration: none;
+        }
+    }
+    &__content{
+        width: 80vw;
+        height: 90vh;
+        overflow: hidden;
+        border-radius: 3px;
+
+
+        display: grid;
+        grid-template-columns: 40% 10% 10% 40%;
+
+    }
+    &__text{
+        grid-column: 2 / 4;
+        grid-row: 1 / 2;
+
+        text-align: center;
+        font-size: 2rem;
+        font-family: $font-uppercase;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #000;
+        padding: 3rem 0;
+        border-radius: 3px;
+        z-index: 50;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+
+        &--model{
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+        &--name{
+            font-family: $font-soft-wave;
+            text-transform: lowercase;
+            &::first-letter{
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__figure-citroneta{
+        &--1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-citroneta-1.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+        &--2{
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-citroneta-2.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+    }
+    &__figure-eternidad{
+        &--1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-eternidad-1.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+        &--2{
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-eternidad-2.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+    }
+    &__figure-lemonskate{
+        &--1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-lemon-skate-1.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+        &--2{
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-lemon-skate-2.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+    }
+    &__figure-rosas{
+        &--1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-rosas-1.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+        &--2{
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-rosas-2.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+    }
+    &__figure-causaperdida{
+        &--1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-causa-perdida-1.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+        &--2{
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-causa-perdida-2.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+    }
+    &__figure-vinyl{
+        &--1{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-vinyl-1.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+        &--2{
+            grid-column: 4 / 5;
+            grid-row: 1 / 2;
+            background-image: url(../../img/t-shirts/r-vinyl-2.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+    }
+}
+/////formulario de compra
+.form{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__label{
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+    &__select{
+        width: 90%;
+        padding: .3rem .8rem;
+        appearance: none;
+        border-style: none;
+        outline-style: none;
+        text-align: center;
+        background-color: $color-primary-wine;
+        color: #fff;
+        font-family: $font-uppercase;
+        font-size: 2rem;
+        text-transform: uppercase;
+        border-radius: 10px;
+        transition: .2s;
+
+        option{
+            border-radius: 10px;
+            background-color: $color-primary-wine;
+        }
+        &:focus{
+            outline: none;
+        }
+
+        &:hover{
+            transform: scale(1.1) translateY(-2px);
+            background-color: $color-secondary-wine;
+            cursor: pointer;
+        }
+    }
+    &__btn{
+        margin-top: 2rem;
+        border: none;
+        outline: none;
+        display: inline-block;
+        padding: .5rem 1rem;
+        border-radius: 10px;
+        background-color: $color-secondary-green;
+        font-family: $font-uppercase;
+        text-transform: uppercase;
+        font-size: 2rem;
+        cursor: pointer;
+        color: $color-primary-gray-4;
+        transition: .2s;
+        &:hover{
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 .7rem 3rem rgba($color-primary-green, $alpha: 1.0);
+        }
+    }
+}

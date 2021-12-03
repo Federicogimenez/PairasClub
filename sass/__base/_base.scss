@@ -3,9 +3,12 @@ $color-primary-blue: #12234e;
 $color-primary-pink: #8d074a;
 $color-primary-orange: #953002;
 $color-primary-wine: #531210;
+$color-secondary-wine: #5f302f;
 $color-primary-yellow: #d49700;
 $color-primary-green: #1e5d17;
+$color-secondary-green: #073602;
 $color-primary-red: #ff3333;
+$color-secondary-red: #461010;
 
 $color-primary-gray-1: #3d2323;
 $color-primary-gray-2: #889ea9;
@@ -48,7 +51,7 @@ background-color: #000;
 
     display: grid;
     grid-template-columns: 3rem [full-start] 1fr repeat(12, [col-start] minmax(min-content, 10rem)[col-end]) 1fr [full-end] 3rem;
-    grid-template-rows: 70vh 20vh 80vh 100vh 80vh 30vh;
+    grid-template-rows: 70vh 20vh 60vh  max-content 1fr 1fr 30vh;
 
 
     // height: 100rem;
@@ -60,6 +63,7 @@ background-color: #000;
     grid-row: 1 / -1;
     position: fixed;
     height: 100vh;
+
     background-image: linear-gradient(to bottom, #000, transparent, #000), 
                     url(../../img/concrete-wall.jpg);
                     background-size: cover;

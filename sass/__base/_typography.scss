@@ -6,6 +6,7 @@
 // font-family: 'Indie Flower', cursive;
 // font-family: 'Lobster Two', cursive;
 // font-family: 'Permanent Marker', cursive;
+// font-family: 'Shadows Into Light', cursive;
 
 $font-wave: "Comforter", cursive;
 $font-soft-wave: 'Allura', cursive;
@@ -19,4 +20,10 @@ $font-uppercase: 'Gochi Hand', cursive;
         animation: movingDown 1s cubic-bezier(.46,1.14,.55,1.19);
         animation-delay: .5s;
         animation-fill-mode: both;
+}
+.heading__2{
+        font-family: $font-uppercase;
+        text-transform: uppercase;
+        color: #000;
+        font-size: 5rem;
 }
