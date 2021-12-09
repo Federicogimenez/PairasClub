@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <figure class="bg-logo">
-            <img src="img/pairas club BATIK.png" alt="logo" class="bg-logo__img">
+            <img src="img/pairas-club-BATIK.png" alt="logo" class="bg-logo__img">
         </figure>
         <header class="header">
             <div class="header__content">
@@ -71,51 +71,73 @@
         </section>
         <section class="product" id="product-section">
             <div class="card">
+                <input type="checkbox" name="giro" id="giro-citro" class="girar girar__input">
+                <label for="giro-citro" class="girar girar__label">girar</label>
                 <div class="card__side card__side--front card__side--front-1">
                     <h4 class="card__name">citroneta</h4>
                 </div>
                 <div class="card__side card__side--back card__side--back-1">
                     <a href="#poput-1" class="card__tienda">ver en tienda</a>
+
                 </div>
             </div>
             <div class="card">
+                <input type="checkbox" name="giro" id="giro-eterno" class="girar girar__input">
+                <label for="giro-eterno" class="girar girar__label">girar</label>
                 <div class="card__side card__side--front card__side--front-2">
                     <h4 class="card__name">eternidad</h4>
+
                 </div>
                 <div class="card__side card__side--back card__side--back-2">
                     <a href="#poput-2" class="card__tienda">ver en tienda</a>
+
                 </div>
             </div>
             <div class="card">
+                <input type="checkbox" name="giro" id="giro-lemon" class="girar girar__input">
+                <label for="giro-lemon" class="girar girar__label">girar</label>
                 <div class="card__side card__side--front card__side--front-3">
                     <h4 class="card__name">lemon skate</h4>
+
                 </div>
                 <div class="card__side card__side--back card__side--back-3">
                     <a href="#poput-3" class="card__tienda">ver en tienda</a>
+
                 </div>
             </div>
             <div class="card">
+                <input type="checkbox" name="giro" id="giro-rosado" class="girar girar__input">
+                <label for="giro-rosado" class="girar girar__label">girar</label>
                 <div class="card__side card__side--front card__side--front-4">
                     <h4 class="card__name">rosas</h4>
+
                 </div>
                 <div class="card__side card__side--back card__side--back-4">
                     <a href="#poput-4" class="card__tienda">ver en tienda</a>
+
                 </div>
             </div>
             <div class="card">
+                <input type="checkbox" name="giro" id="giro-perdido" class="girar girar__input">
+                <label for="giro-perdido" class="girar girar__label">girar</label>
                 <div class="card__side card__side--front card__side--front-5">
                     <h4 class="card__name">causa perdida</h4>
+
                 </div>
                 <div class="card__side card__side--back card__side--back-5">
                     <a href="#poput-5" class="card__tienda">ver en tienda</a>
+
                 </div>
             </div>
             <div class="card">
+                <input type="checkbox" name="giro" id="giro-vinilo" class="girar girar__input">
+                <label for="giro-vinilo" class="girar girar__label">girar</label>
                 <div class="card__side card__side--front card__side--front-6">
                     <h4 class="card__name">vinyl</h4>
                 </div>
                 <div class="card__side card__side--back card__side--back-6">
                     <a href="#poput-6" class="card__tienda">ver en tienda</a>
+
                 </div>
             </div>
         </section>
@@ -143,7 +165,28 @@
                 <figure class="work-gallery__item work-gallery__item--20"></figure>
             </div>
         </section>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="footer__contact">
+                <h5 class="footer__contact--tittle">contact us &rarr;</h5>
+                <div class="footer__contact--box">
+                    <svg class="footer__contact--icon">
+                        <use xlink:href="img/sprite.svg#icon-location-pin"></use>
+                    </svg>
+                    <p class="footer__contact--info">olavarria, barrio los robles</p>
+                </div>
+                <div class="footer__contact--box">
+                    <svg class="footer__contact--icon">
+                        <use xlink:href="img/sprite.svg#icon-chat"></use>
+                    </svg>
+                    <p class="footer__contact--info">+54 2254-3565333</p>
+                </div>
+            </div>
+            <figure class="footer__logo">
+            </figure>
+            <p class="footer__copyright">
+                Built by <a href="#" class="footer__link">Federico Gimenez</a> to aproach his knowledge on <a href="#" class="footer__link">ADVANCED AND RESPONSIVE CSS USING SASS</a>. The design also is by Federico Gimenez and the content is thanks my friends from "Pairas Club", i wish you to be lucky! Copyright © by Federico Gimenez.
+            </p>
+        </footer>
 
         <div class="poput" id="poput-1">
             <a href="#product-section" class="poput__close">&times;</a>
@@ -177,9 +220,9 @@
                         <button type="submit" class="form__btn">realizar compra</button>
                     </form>
                 </div>
-                <figure class="poput__figure-citroneta poput__figure-citroneta--1">
+                <figure class="poput__figure-1 poput__figure-1--citroneta">
                 </figure>
-                <figure class="poput__figure-citroneta poput__figure-citroneta--2">
+                <figure class="poput__figure-2 poput__figure-2--citroneta">
                 </figure>
             </div>
         </div>
@@ -215,9 +258,9 @@
                         <button type="submit" class="form__btn">realizar compra</button>
                     </form>
                 </div>
-                <figure class="poput__figure-eternidad poput__figure-eternidad--1">
+                <figure class="poput__figure-1 poput__figure-1--eternidad">
                 </figure>
-                <figure class="poput__figure-eternidad poput__figure-eternidad--2">
+                <figure class="poput__figure-2 poput__figure-2--eternidad">
                 </figure>
             </div>
         </div>
@@ -253,9 +296,9 @@
                         <button type="submit" class="form__btn">realizar compra</button>
                     </form>
                 </div>
-                <figure class="poput__figure-lemonskate poput__figure-lemonskate--1">
+                <figure class="poput__figure-1 poput__figure-1--lemonskate">
                 </figure>
-                <figure class="poput__figure-lemonskate poput__figure-lemonskate--2">
+                <figure class="poput__figure-2 poput__figure-2--lemonskate">
                 </figure>
             </div>
         </div>
@@ -291,9 +334,9 @@
                         <button type="submit" class="form__btn">realizar compra</button>
                     </form>
                 </div>
-                <figure class="poput__figure-rosas poput__figure-rosas--1">
+                <figure class="poput__figure-1 poput__figure-1--rosas">
                 </figure>
-                <figure class="poput__figure-rosas poput__figure-rosas--2">
+                <figure class="poput__figure-2--rosas poput__figure-2--rosas">
                 </figure>
             </div>
         </div>
@@ -329,9 +372,9 @@
                         <button type="submit" class="form__btn">realizar compra</button>
                     </form>
                 </div>
-                <figure class="poput__figure-causa-perdida poput__figure-causaperdida--1">
+                <figure class="poput__figure-1 poput__figure-1--causa-perdida">
                 </figure>
-                <figure class="poput__figure-causa-perdida poput__figure-causaperdida--2">
+                <figure class="poput__figure-2 poput__figure-2--causa-perdida">
                 </figure>
             </div>
         </div>
@@ -367,9 +410,9 @@
                         <button type="submit" class="form__btn">realizar compra</button>
                     </form>
                 </div>
-                <figure class="poput__figure-causa-perdida poput__figure-vinyl--1">
+                <figure class="poput__figure-1 poput__figure-1--vinyl">
                 </figure>
-                <figure class="poput__figure-causa-perdida poput__figure-vinyl--2">
+                <figure class="poput__figure-2 poput__figure-2--vinyl">
                 </figure>
             </div>
         </div>

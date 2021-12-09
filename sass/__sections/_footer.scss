@@ -2,5 +2,86 @@
     grid-column: full-start / full-end;
 
     background-color: $color-primary-gray-6;
-    z-index: 5;
+    z-index: 10;
+    padding: 4rem;
+
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    row-gap: 4rem;
+
+
+
+    &__logo{
+        height: 12rem;
+        width: 50%;
+        background-image: url(../../img/pairas-club-BATIK.png);
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    &__contact{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        &--tittle{
+            font-size: 3rem;
+            color: #fff;
+            font-family: $font-uppercase;
+            text-transform: uppercase;
+        }
+        &--box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 30%;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover{
+                background-color: $color-primary-red;
+                transform: scale(1.1);
+            }
+        }
+        &--box:hover &--info{
+            color: #000;
+        }
+        &--info{
+            text-transform: uppercase;
+            font-family: $font-uppercase;
+            color: $color-primary-gray-4;
+            font-size: 2rem;
+        }
+        &--icon{
+            height: 3rem;
+            width: 6rem;
+            fill: #fff;
+            margin: 0 2rem;
+        }
+    }
+
+    &__copyright{
+        color: #fff;
+        font-size: 2rem;
+        font-family: sans-serif;
+
+    }
+    &__link{
+        &,
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color: $color-primary-gray-4;
+            text-transform: uppercase;
+
+            &:hover{
+                transform: scale(1.2) ;
+                background-color: $color-primary-red;
+                color: #000;
+            }
+        }
+
+
+    }
 }

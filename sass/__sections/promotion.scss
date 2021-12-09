@@ -19,6 +19,7 @@
 }
 .heading__promo:hover ~ .promo-container{
     opacity: .3;
+    transform: scale(.9);
 }
 .promo-container{
     height: 100%;
@@ -51,6 +52,7 @@
 
     &:hover{
         background-color: rgba(#fff, 1);
+        transform: translate(-50%, -50%) scale(1.2);
     }
 
     &:active{
@@ -67,17 +69,23 @@
         grid-column: 1 / 2;
         background-image: url(../../img/promo-1.JPG);
         background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
     }
     &__2{
         grid-row: 1 / 2;
         grid-column: 2 / 3;
         background-image: url(../../img/promo-2.JPG);
         background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
     }
     &__3{
         grid-row: 1 / 2;
         grid-column: 3 / 4;
         background-image: url(../../img/promo-3.JPG);
         background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
     }
 }

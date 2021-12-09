@@ -11,6 +11,15 @@
     row-gap: 1.7rem;
 
     margin: 7rem 0;
+
+    @media only screen and (max-width: $media-bp-bigger){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media only screen and (max-width: $media-bp-medium){
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 15rem;
+        margin-top: 30rem;
+    }
 }
 .card{
     //FUNCTIONALITY
@@ -19,6 +28,17 @@
     height: 52rem;
 
     z-index: 20;
+
+    @media only screen and (max-width: $media-bp-bigger){
+        height: 80rem;
+    }
+
+    @media only screen and (max-width: $media-bp-medium){
+        height: 100rem;
+    }
+    @media only screen and (max-width: $media-bp-small){
+        height: 120rem;
+    }
     
 
     &__side{
@@ -33,6 +53,17 @@
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba(#000 ,.15);
 
+        @media only screen and (max-width: $media-bp-bigger){
+            height: 80rem;
+        }
+        
+        @media only screen and (max-width: $media-bp-medium){
+            height: 100rem;
+        }
+
+        @media only screen and (max-width: $media-bp-small){
+            height: 120rem;
+        }
 
         &--front{
             display: flex;
@@ -41,36 +72,42 @@
                                     url(../../img/t-shirts/r-citroneta-1.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-2{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                     url(../../img/t-shirts/r-eternidad-1.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-3{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                     url(../../img/t-shirts/r-lemon-skate-1.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-4{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                     url(../../img/t-shirts/r-rosas-1.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-5{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                     url(../../img/t-shirts/r-causa-perdida-1.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-6{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                     url(../../img/t-shirts/r-vinyl-1.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
         }
         &--back{
@@ -83,36 +120,42 @@
                                      url(../../img/t-shirts/r-citroneta-2.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-2{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                      url(../../img/t-shirts/r-eternidad-2.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-3{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                      url(../../img/t-shirts/r-lemon-skate-2.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-4{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                      url(../../img/t-shirts/r-rosas-2.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-5{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                      url(../../img/t-shirts/r-causa-perdida-2.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
             &-6{
                 background-image: linear-gradient(to bottom, #000 6%, transparent 15%, transparent 80%, #000 90%),
                                      url(../../img/t-shirts/r-vinyl-2.jpg);
                 background-size: cover;
                 background-position-x: center;
+                background-position-y: center;
             }
         }
 
@@ -163,8 +206,62 @@
 
     &:hover &__side--front {
         transform: rotateY(-180deg);
+
+        @media only screen and (max-width: $media-bp-medium) and (hover:none){
+            transform: rotateY(0deg);
+        }
     }
     &:hover &__side--back {
         transform: rotateY(0deg);
+
+        @media only screen and (max-width: $media-bp-medium) and (hover:none){
+            transform: rotateY(180deg);
+        }
     }
+}
+
+.girar{
+    visibility: hidden;
+
+    @media only screen and (max-width: $media-bp-medium) and (hover:none){
+        visibility: visible;
+    }
+
+    &__label{
+        font-size: 4rem;
+        color: #fff;
+        background-color: $color-primary-green;
+        position: absolute;
+        left: 50%;
+        top: -7rem;
+        transform: translateX(-50%);
+        cursor: pointer;
+        padding: .5rem 2rem;
+        border-radius: 7px;
+        text-transform: uppercase;
+        text-align: center;
+        box-shadow: 0 .6rem 1.5rem rgba($color-primary-green, $alpha: 1.0);
+        transition: .2s;
+        &:active{
+            transform: translateX(-50%) translateY(1rem);
+        }
+    }
+    &__input{
+        visibility: hidden;
+    }
+}
+.girar__input:checked ~ .card__side--front{
+    @media only screen and (max-width: $media-bp-medium) and (hover:none){
+        transform: rotateY(-180deg);
+    }
+
+}
+.girar__input:checked ~ .card__side--back{
+    @media only screen and (max-width: $media-bp-medium) and (hover:none){
+        transform: rotateY(0deg);
+    }
+}
+.girar__input:checked ~ .girar__label{
+    background-color: $color-primary-wine;
+    box-shadow: 0 0 2.5rem rgba($color-primary-wine, $alpha: 1.0);
 }

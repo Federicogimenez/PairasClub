@@ -10,29 +10,17 @@ $color-secondary-green: #073602;
 $color-primary-red: #ff3333;
 $color-secondary-red: #461010;
 
-$color-primary-gray-1: #3d2323;
+$color-primary-gray-1: #413b3b;
 $color-primary-gray-2: #889ea9;
 $color-primary-gray-3: #81afa5;
 $color-primary-gray-4: #e8feff;
 $color-primary-gray-5: #6a706e;
 $color-primary-gray-6: #13181b;
 
-
-/////////////LOGO COLOR
-        // color: transparent;
-        // font-size: 35px;
-        // font-family: $font-soft-wave;
-        // -webkit-background-clip: text;
-        // background-clip: text;
-        // background-image: linear-gradient(to right, 
-        // $color-primary-blue,
-        // $color-primary-pink,
-        // $color-primary-orange,
-        // $color-primary-wine, 
-        // $color-primary-yellow,
-        // $color-primary-green);
-
-
+$media-bp-huge: 68.75em; //1100px
+$media-bp-bigger: 56.25em; //900px
+$media-bp-medium: 43.75em; //700px
+$media-bp-small: 37.5em; //600px
 
 *,
 *::before,
@@ -45,13 +33,26 @@ html{
     box-sizing: border-box;
     font-size: 62.5%; //1rem = 10px{10/16}
     font-weight: 300;
+
+    @media only screen and (max-width: $media-bp-huge){
+        font-size: 56.25%; //9px
+    }
+    @media only screen and (max-width: $media-bp-bigger){
+        font-size: 50%; //8px
+    }
+    @media only screen and (max-width: $media-bp-medium){
+        font-size: 43.75%; //7px
+    }
+    @media only screen and (max-width: $media-bp-small){
+        font-size: 37.5%; //6px
+    }
 }
 .container{
 background-color: #000;
 
     display: grid;
     grid-template-columns: 3rem [full-start] 1fr repeat(12, [col-start] minmax(min-content, 10rem)[col-end]) 1fr [full-end] 3rem;
-    grid-template-rows: 70vh 20vh 60vh  max-content 1fr 1fr 30vh;
+    grid-template-rows: 70vh 20vh 60vh  max-content 1fr;
 
 
     // height: 100rem;
